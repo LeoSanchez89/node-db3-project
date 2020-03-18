@@ -24,3 +24,22 @@ SELECT ([Order].Id), Customer.CompanyName, Employee.LastName
 FROM [Order]
 JOIN Customer ON ([Order].CustomerId) = Customer.Id
 JOIN Employee ON ([Order].EmployeeId) = Employee.Id
+
+-- other
+
+-- SELECT steps.id, schemes.scheme_name, steps.step_number, steps.instructions
+-- from steps
+-- JOIN schemes ON  steps.scheme_id = schemes.id
+-- WHERE schemes.id = 2
+-- ORDER BY steps.step_number ASC
+
+-- return db("steps")
+-- 	.join("schemes", "steps.scheme_id", "schemes.id")
+-- 	.select(
+-- 		"steps.id",
+-- 		"schemes.scheme_name",
+-- 		"steps.step_number",
+-- 		"steps.instructions"
+-- 	)
+-- 	.where("schemes.id", `${ id }`)
+-- 	.orderBy("steps.step_number");

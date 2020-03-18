@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     res.status(500).json({ message: 'Failed to get schemes' });
   });
 });
-
+ 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
 
